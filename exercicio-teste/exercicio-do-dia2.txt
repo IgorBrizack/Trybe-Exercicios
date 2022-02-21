@@ -3,5 +3,8 @@
 -bash
 -html
 -css
+-macOs
+-Android
 -react]
 -node
+
