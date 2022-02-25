@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+.listas {
+    text-align: center;    
+}
+
+li:hover {
+    background-color: green;
+    transition: 300ms;
+}
+
+li:active {
+    color: blue;
+    transition: 300ms;
+}
