@@ -1,0 +1,59 @@
+ol li {
+    background-color: yellow;
+    
+}
+
+ol li.par {
+    background-color: green;
+}
+
+ol li.impar{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1, h3 {
+    color: red;
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px black solid;
+}
+
+li {
+    font-size: 20px;
+}
+
+ul#linguagens li.primario {
+    color: blue;
+}
+
+ul#linguagens li.java {
+    color: rgb(151, 13, 117);
+}
+
+ul li#site1 a:hover{
+    font-weight: bold;
+    color: orange;
+}
+
+ul li#site2 a:hover{
+    font-weight: bold;
+    color: green;   
+}
+
+ul li#site3 a:hover{
+    font-weight: bold;
+    color: black; 
+}
+
+ul li#site4 a:hover{
+    font-weight: bold;
+    color: yellow;
+}
+
+ul li#site5 a:hover{
+    font-weight: bold;
+    color: green;
+}
