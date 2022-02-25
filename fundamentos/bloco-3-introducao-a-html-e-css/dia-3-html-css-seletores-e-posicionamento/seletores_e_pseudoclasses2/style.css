@@ -1,6 +1,6 @@
 div:hover {
     background-color: blue;
-    border-top: 20px red solid;
+    border: 5px red solid;
 }
 
 #primaria {
@@ -25,7 +25,6 @@ div:hover {
 #escura {
     color: brown;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
 #clara {
