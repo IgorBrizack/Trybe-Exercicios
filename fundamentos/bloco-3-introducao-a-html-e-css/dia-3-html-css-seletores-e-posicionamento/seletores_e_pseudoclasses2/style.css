@@ -1,5 +1,6 @@
 div:hover {
     background-color: blue;
+    border-top: 20px red solid;
 }
 
 #primaria {
