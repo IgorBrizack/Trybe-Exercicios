@@ -118,6 +118,21 @@ if (nota >= 90 && nota <= 100) {
     console.log("Nota F")
 }
 
+// verificar se pelo menos um dos números é par
+
+const val1 = 1;
+const val2 = 2;
+const val3 = 3;
+let result;
+
+if((val1 % 2 == 0) || (val2 % 2 == 0) || (val3 % 2 == 0)){
+    result = true;
+    console.log(result);
+} else {
+    result = false;
+    console.log(result);
+}
+
 
 
 
