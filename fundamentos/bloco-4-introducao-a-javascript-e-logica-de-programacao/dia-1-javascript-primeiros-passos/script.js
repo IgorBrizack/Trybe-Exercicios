@@ -133,6 +133,35 @@ if((val1 % 2 == 0) || (val2 % 2 == 0) || (val3 % 2 == 0)){
     console.log(result);
 }
 
+// verificar se pelo menos um dos números é ímpar
 
+const val4 = 1;
+const val5 = 2;
+const val6 = 3;
+let resultImpar;
 
+if((val4 % 2 != 0) || (val5 % 2 != 0) || (val6 % 2 != 0)){
+    resultImpar = true;
+    console.log(resultImpar);
+} else {
+    resultImpar = false;
+    console.log(resultImpar);
+}
+
+// Calculadora de lucro
+
+let valorProduto = 20;
+let imposto = 1.2
+let valorCustoTotal = valorProduto * imposto;
+let valorVenda = 35;
+let lucro = valorVenda - valorCustoTotal;
+
+if(valorProduto <= 0 || valorVenda <= 0){
+    console.log("Valores de entrada Inválidos!");
+} else {
+    let vendaMilProdutos = lucro * 1000;
+    console.log(vendaMilProdutos);
+}
+
+//
 
