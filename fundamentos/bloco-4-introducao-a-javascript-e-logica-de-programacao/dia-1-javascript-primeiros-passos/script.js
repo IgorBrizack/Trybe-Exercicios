@@ -53,14 +53,24 @@ if(o >= 1){
     console.log('Zero');
 }
 
-// Lados de um triângulo
+// Lados de um triângulo 
 
 let ladoA = 60;
 let ladoB = 60;
 let ladoC = 60;
 
-if((ladoA + ladoB + ladoC) != 180){
+if (ladoA < 0){
+    console.log('O ângulo A é inválido');
+} else if (ladoB < 0){
+    console.log('O ângulo B é inválido');
+} else if (ladoC < 0){
+    console.log('O ângulo C é inválido');
+} else if((ladoA + ladoB + ladoC) != 180){
     console.log('Não é um triângulo!!');
 } else {
-    console.log('É um triângulo!');
+    console.log('É um triângulo!')
 }
+
+
+
+
