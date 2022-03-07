@@ -71,6 +71,33 @@ if (ladoA < 0){
     console.log('É um triângulo!')
 }
 
+// Movimentos das peças de Xadrez
 
+let pecaXadrez = "peão";
+
+let peca = pecaXadrez.toLowerCase();
+
+switch (peca) {
+    case "cavalo":
+        console.log('Se move em L.');
+        break;
+    case "bispo":
+        console.log('Se move na Diagonal.');
+        break;
+    case "torre":
+        console.log('Se move na direção Reta.');
+        break;
+    case "rainha":
+        console.log('Se move na diagonal e em retas, até o fim do tabuleiro.');
+        break;
+    case "rei":
+        console.log('Se move na diagonal e em retas, mas só pode andar uma casa de cada vez.');
+        break;
+    case "peão":
+        console.log('Só se move em linhas retas e toma a peça adversária na diagonal.');
+        break;
+    default:
+        console.log('A peça informada é inválida.');
+}
 
 
