@@ -11,3 +11,8 @@ for(index2 = 0; index2 < numbers.length; index2 += 1){
     soma += numbers[index2];
 }
 console.log("A soma dos valores do meu Array são :" + soma);
+
+//Imprimir média aritimética do meu Array. 
+let mediaAritmetica = (soma/numbers.length);
+console.log(mediaAritmetica);
+
