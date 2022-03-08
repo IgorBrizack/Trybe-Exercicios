@@ -14,5 +14,13 @@ console.log("A soma dos valores do meu Array são :" + soma);
 
 //Imprimir média aritimética do meu Array. 
 let mediaAritmetica = (soma/numbers.length);
-console.log(mediaAritmetica);
+console.log("Média Aritmética: " + mediaAritmetica);
+
+//Verificar se a média aritmética é maior que 20.
+if (mediaAritmetica > 20){
+    console.log("Média Artmética maior que 20!");
+} else {
+    console.log("Média Artimética menor que 20!");
+}
+
 
