@@ -39,3 +39,10 @@ console.log("O Array possui um total de " + impar + " numeros impar");
 //Menor valor contido no meu Array
 let menor = Math.min(...numbers);
 console.log("O menor número do meu Array é: " + menor);
+
+//Cria um Array que vá de 1 até 25
+let newArray = [];
+for (index6 = 1; index6 <= 25; index6 += 1){
+    newArray.push(index6);
+}
+console.log(newArray);
