@@ -24,12 +24,7 @@ if (mediaAritmetica > 20){
 }
 
 //Verificar maior valor do meu Array e imprimir na tela
-let maior = 0;
-for (index3 = 0; index3 < numbers.length; index3 += 1){
-    if(numbers[index3] > maior){
-        maior = numbers[index3];
-    }
-}
+let maior = Math.max(...numbers);
 console.log("O maior número do meu Array é: " + maior);
 
 //Verificar se há números impares no meu array e imprimir na tela quantos tem.
@@ -40,3 +35,7 @@ for (index4 = 0; index4 < numbers.length; index4 += 1){
     }
 }
 console.log("O Array possui um total de " + impar + " numeros impar");
+
+//Menor valor contido no meu Array
+let menor = Math.min(...numbers);
+console.log("O menor número do meu Array é: " + menor);
