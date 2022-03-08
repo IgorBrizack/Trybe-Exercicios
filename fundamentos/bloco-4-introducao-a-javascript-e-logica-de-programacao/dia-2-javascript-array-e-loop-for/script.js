@@ -23,4 +23,12 @@ if (mediaAritmetica > 20){
     console.log("Média Artimética menor que 20!");
 }
 
+//Verificar maior valor do meu Array e imprimir na tela
+let maior = 0;
+for (index3 = 0; index3 < numbers.length; index3++){
+    if(numbers[index3] > maior){
+        maior = numbers[index3];
+    }
+}
+console.log("O maior número do meu Array é: " + maior);
 
