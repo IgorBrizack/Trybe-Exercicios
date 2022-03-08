@@ -46,3 +46,10 @@ for (index6 = 1; index6 <= 25; index6 += 1){
     newArray.push(index6);
 }
 console.log(newArray);
+
+//Imprimir na tela a divisao por 2 de cada valor do meu novo array.
+let div2 = 0;
+for(index7 = 0; index7 < newArray.length; index7 += 1){
+    div2 = newArray[index7] / 2;
+    console.log(div2.toFixed(2));
+}
