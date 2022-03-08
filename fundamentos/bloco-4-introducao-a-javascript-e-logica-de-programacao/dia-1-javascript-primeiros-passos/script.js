@@ -163,5 +163,51 @@ if(valorProduto <= 0 || valorVenda <= 0){
     console.log(vendaMilProdutos);
 }
 
-//
+// Calculadora desconto de salário
+
+const salarioBruto = 3000.00;
+let salarioAliquotaInss;
+let salarioImpostoDeRenda;
+console.log("Salário Bruto de " + salarioBruto);
+
+//INSS
+if (salarioBruto < 1556.94){
+    salarioAliquotaInss = salarioBruto - (salarioBruto * 0.08);
+    console.log("Alíquota de 8%");
+    console.log("Salário com Aliquota INSS R$" + salarioAliquotaInss.toFixed(2));
+} else if (salarioBruto >= 1566.94 && salarioBruto < 2594.92){
+    salarioAliquotaInss = salarioBruto - (salarioBruto * 0.09);
+    console.log("Alíquota de 9%");
+    console.log("Salário com Aliquota INSS R$" + salarioAliquotaInss.toFixed(2));
+} else if (salarioBruto >= 2594.93 && salarioBruto < 5189.92){
+    salarioAliquotaInss = salarioBruto - (salarioBruto * 0.11);
+    console.log("Alíquota de 11%");
+    console.log("Salário com Aliquota INSS R$" + salarioAliquotaInss.toFixed(2));
+} else if (salarioBruto >= 5289.93){
+    salarioAliquotaInss = salarioBruto - 570.88;
+    console.log("Alíquota máxima de R$570,88");
+    console.log("Salário com Aliquota INSS R$" + salarioAliquotaInss.toFixed(2));
+}
+
+
+//Imposto de Renda - já vem deduzido o INSS
+
+if (salarioAliquotaInss < 1903.98){
+    console.log('Isento de Imposto de Renda');        
+} else if (salarioAliquotaInss >= 1903.99 && salarioAliquotaInss < 2826.65){
+    salarioImpostoDeRenda = salarioAliquotaInss - ((salarioAliquotaInss * 0.075) - 142.80);
+    console.log("Salário Liquido com desconto IR R$" + salarioImpostoDeRenda.toFixed(2));
+} else if (salarioAliquotaInss >= 2826.66 && salarioAliquotaInss < 3751.05){
+    salarioImpostoDeRenda = salarioAliquotaInss - ((salarioAliquotaInss * 0.15) - 354.80);
+    console.log("Salário Liquido com desconto IR R$" + salarioImpostoDeRenda.toFixed(2));
+} else if (salarioAliquotaInss >= 3751.06 && salarioAliquotaInss < 4664.68){
+    salarioImpostoDeRenda = salarioAliquotaInss - ((salarioAliquotaInss * 0.225) - 636.13);
+    console.log("Salário Liquido com desconto IR R$" + salarioImpostoDeRenda.toFixed(2)); 
+} else if (salarioAliquotaInss > 4664.68 ){
+    salarioImpostoDeRenda = salarioAliquotaInss - ((salarioAliquotaInss * 0.275) - 869.36);
+    console.log("Salário Liquido com desconto IR R$" +  salarioImpostoDeRenda.toFixed(2)); 
+}
+
+
+
 
