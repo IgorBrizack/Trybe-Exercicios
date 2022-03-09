@@ -30,7 +30,7 @@ console.log("O maior número do meu Array é: " + maior);
 //Verificar se há números impares no meu array e imprimir na tela quantos tem.
 let impar = 0;
 for (index4 = 0; index4 < numbers.length; index4 += 1){
-    if(numbers[index4] % 2 == 0){
+    if(numbers[index4] % 2 !== 0){
         impar++;
     }
 }
