@@ -7,4 +7,8 @@
     fatorial = fatorial * (numero - index);
     console.log(fatorial)
 } 
- 
+
+//Algoritimo de inverter as palavras
+let word = "Tryber";
+let reverse = word.split("").reverse().join("");
+console.log(reverse);
