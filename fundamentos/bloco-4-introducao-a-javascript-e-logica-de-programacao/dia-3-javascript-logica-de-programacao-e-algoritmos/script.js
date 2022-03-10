@@ -12,3 +12,6 @@
 let word = "Tryber";
 let reverse = word.split("").reverse().join("");
 console.log(reverse);
+
+//verificar qual é a maior e a menor palavra e retonar as duas.
+let array = ['java', 'javascript', 'python', 'html', 'css'];
