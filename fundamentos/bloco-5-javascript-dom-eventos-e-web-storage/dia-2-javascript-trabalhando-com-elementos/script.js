@@ -116,4 +116,20 @@ function centerSection(){
 centerSection();
 
 // Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+function changeColorGreen(){
+    let dadElement = document.querySelector('.center-content').parentNode;
+    dadElement.style.backgroundColor = 'green'
+}
+changeColorGreen();
+
+
 // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+function removeLastChild(){
+    for(let index = 0; index < 2; index += 1){
+        let unList = document.querySelector('ul');
+        let child = document.querySelector('ul').lastChild;
+        unList.removeChild(child);
+    }
+}
+removeLastChild();
