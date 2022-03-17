@@ -131,7 +131,6 @@ for(let cont = 0 ; cont < document.getElementsByClassName('day').length; cont +=
     let dia = document.getElementsByClassName('day')[cont];
     dia.addEventListener('mouseenter', zoomIn);
     dia.addEventListener('mouseout', zoomOut)
-    console.log(dia)
 }
 
 function zoomIn(element){
@@ -175,9 +174,43 @@ newCaption('red');
 // Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
 
-// let evento;
-// evento.addEventListener('click', elementDiv)
+let divs = document.getElementsByTagName('div');
 
-// function elementDiv(element){
+for(let contador = 0; contador < divs.length; contador += 1){
+    if(divs[contador].style.backgroundColor === 'red')
+    
+    divs[contador].addEventListener('click', addClass);
+}
+let aux3 = 0;
+function addClass(element){
+    if(aux3 == 0){
+        element.target.classList.add('selected');
+        aux3 += 1;
+    } else {
+        element.target.classList.remove('selected');
+        aux3 = 0;
+    }
+}
 
-// }
+
+// Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119).
+
+for(let cont = 0 ; cont < document.getElementsByClassName('day').length; cont += 1){
+    let dayColors = document.getElementsByClassName('day')[cont];
+    dayColors.addEventListener('click', schedule);
+}
+let aux4 = 0;
+function schedule(element){
+    if(aux4 == 0){
+        let taskColor = document.getElementsByClassName('task selected')[0].style.backgroundColor;
+        console.log(taskColor)
+        element.target.style.color = taskColor;
+        aux4 += 1;
+    } else {
+        let taskColor = document.getElementsByClassName('task selected')[0].style.backgroundColor;
+        console.log(taskColor)
+        element.target.style.color = 'rgb(119,119,119)';
+        aux4 = 0;
+    }
+}
