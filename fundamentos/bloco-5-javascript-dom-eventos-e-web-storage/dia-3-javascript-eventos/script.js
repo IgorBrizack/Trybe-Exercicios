@@ -93,16 +93,14 @@ function changeBackgroundColor(){
 // Adicione a este botão o ID "btn-friday" .
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
-// const btnFeriado = document.getElementById('btn-holiday');
-// btnFeriado.addEventListener('click', changeBackgroundColor);
-// let aux = 0;
-// function changeBackgroundColor(){
-//     let holidays = document.getElementsByClassName('holiday');
-//     if(aux == 0) {
-//         for(let index = 0; index < holidays.length; index += 1){
-//             holidays[index].style.backgroundColor = 'black';
-//         }
-       
-    
-    
-// }
+function createBtnFriday(string){
+    let divMain = document.getElementsByClassName('buttons-container');
+    let btn = document.createElement('button');
+    btn.innerText = string;
+    btn.id = 'btn-friday';
+    divMain[0].appendChild(btn);
+}
+createBtnFriday('Sexta-feira');
+
+// Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
