@@ -127,20 +127,57 @@ function changeBackgroundColorFriday(){
 
 // Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 
-// let mouse = document.getElementsByClassName('day');
-// mouse.addEventListener('mouseenter', zoom);
+for(let cont = 0 ; cont < document.getElementsByClassName('day').length; cont += 1){
+    let dia = document.getElementsByClassName('day')[cont];
+    dia.addEventListener('mouseenter', zoomIn);
+    dia.addEventListener('mouseout', zoomOut)
+    console.log(dia)
+}
 
-// function zoom(element){
-//         element.target.style.fontsize = '30px'
-// }
+function zoomIn(element){
+    element.target.style.color = "green";
+    element.target.style.fontSize = '35px';
+}
+
+function zoomOut(element){
+    element.target.style.color = '#777'
+    element.target.style.fontSize = '20px'
+}
 
 // Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
 
 function newTask(string){
     let divTask = document.getElementsByClassName('my-tasks');
-    let newSpan = document.createElement('span');
-    newSpan.innerText = string;
-    divTask[0].appendChild(newSpan);
+    for(let index = 0; index < divTask.length; index += 1){
+        let newSpan = document.createElement('span');
+        newSpan.innerText = string;
+        divTask[index].appendChild(newSpan);
+    }
 }
 newTask('cozinhar');
+
+// Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+// O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+function newCaption(cor){
+    let divTask = document.getElementsByClassName('my-tasks');
+    for(let index = 0; index < divTask.length;index += 1){
+        let newCaption = document.createElement('div');
+        newCaption.style.backgroundColor = cor;
+        newCaption.className = 'task';
+        divTask[index].appendChild(newCaption);
+    }      
+}
+newCaption('red');
+
+// Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+// let evento;
+// evento.addEventListener('click', elementDiv)
+
+// function elementDiv(element){
+
+// }
