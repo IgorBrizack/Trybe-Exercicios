@@ -116,10 +116,31 @@ function changeBackgroundColorFriday(){
         }
         aux2 += 1;
     } else {
+        let cont = 4
         for(let index = 0; index < friday.length; index += 1){
-        friday[index].innerText = ;
+            friday[index].innerText = String(cont);
+            cont += 7;
         }
         aux2 = 0;
     }
-    
 }
+
+// Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+
+// let mouse = document.getElementsByClassName('day');
+// mouse.addEventListener('mouseenter', zoom);
+
+// function zoom(element){
+//         element.target.style.fontsize = '30px'
+// }
+
+// Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+function newTask(string){
+    let divTask = document.getElementsByClassName('my-tasks');
+    let newSpan = document.createElement('span');
+    newSpan.innerText = string;
+    divTask[0].appendChild(newSpan);
+}
+newTask('cozinhar');
