@@ -1,33 +1,56 @@
-//objeto dos Usuarios
-
 let usuarios = [{
     nome: 'Igor',
     fontSize: '25px',
     colorText: 'red',
-    fontFamily: 'Arial',
+    fontFamily: 'arial',
     backgroundColor: 'black'
 }, {
     nome: 'Julia',
     fontSize: '30px',
     colorText: 'black',
     fontFamily: 'tahoma',
-    backgroundColor: 'blue'
-}]
+    backgroundColor: 'gray'
+},  {
+    nome: 'deafult',
+    fontSize: '20px',
+    colorText: 'black',
+    fontFamily: 'arial',
+    backgroundColor: 'white'
+}];
 
-//criando botão de login usuario
-
-function createButton(){
+function createButtonUser(){
     let inputSection = document.getElementById('inputs');
     let button = document.createElement('button');
-    button.innerText = 'Usuario';
+    button.innerText = 'Usuario Theme';
     button.id = 'button';
     inputSection.appendChild(button);
 }
-createButton();
+createButtonUser();
 
+function createButtonDefault(){
+    let inputSection = document.getElementById('inputs');
+    let button = document.createElement('button');
+    button.innerText = 'Default Theme';
+    button.id = 'buttonDefault';
+    inputSection.appendChild(button);
+}
+createButtonDefault();
 
 let buttonUsuario = document.getElementById('button');
 buttonUsuario.addEventListener('click', getUser);
+
+let buttonTheme = document.getElementById('buttonDefault');
+buttonTheme.addEventListener('click', getUserDefault);
+
+function getUserDefault(){
+    let defaultUser = usuarios[2];
+    let nome = defaultUser.nome;
+    let fontSize = defaultUser.fontSize;
+    let colorText = defaultUser.colorText;
+    let fontFamily = defaultUser.fontFamily;
+    let backgroundColor = defaultUser.backgroundColor;
+    checkPreference(nome, fontSize, colorText, fontFamily, backgroundColor)
+}
 
 function getUser(){
     for(let index = 0; index < usuarios.length; index += 1){
@@ -50,7 +73,6 @@ function checkPreference(nome, fontSize, colorText, fontFamily, backgroundColor)
     localStorage.setItem('backgroundColor', backgroundColor);
     execTheme();
 }
-
 
 function execTheme(){
     let fontSize = localStorage.getItem('fontSize');
@@ -89,5 +111,6 @@ function bckgColors(bckgColor){
     for(let index = 0; index < texts.length; index += 1){
         texts[index].style.backgroundColor = bckgColor;
     }
-}
+}   
 
+onload = execTheme();
