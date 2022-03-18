@@ -2,14 +2,16 @@
 
 let usuarios = [{
     nome: 'Igor',
-    fontSize: '15px',
-    colorText: 'white',
-    fontFamily: 'Arial'
+    fontSize: '25px',
+    colorText: 'red',
+    fontFamily: 'Arial',
+    backgroundColor: 'black'
 }, {
     nome: 'Julia',
-    fontSize: '25px',
+    fontSize: '30px',
     colorText: 'black',
-    fontFamily: 'tahoma'
+    fontFamily: 'tahoma',
+    backgroundColor: 'blue'
 }]
 
 //criando botão de login usuario
@@ -34,29 +36,58 @@ function getUser(){
             let fontSize = usuarios[index].fontSize;
             let colorText = usuarios[index].colorText;
             let fontFamily = usuarios[index].fontFamily;
-            checkPreference(nome, fontSize, colorText, fontFamily)
+            let backgroundColor = usuarios[index].backgroundColor;
+            checkPreference(nome, fontSize, colorText, fontFamily, backgroundColor)
         } 
     }    
 }
 
-function checkPreference(nome, fontSize, colorText, fontFamily){
+function checkPreference(nome, fontSize, colorText, fontFamily, backgroundColor){
     localStorage.setItem('nome', nome);
     localStorage.setItem('fontSize', fontSize);
     localStorage.setItem('colorText', colorText);
     localStorage.setItem('fontFamily', fontFamily);
-    // execTheme();
+    localStorage.setItem('backgroundColor', backgroundColor);
+    execTheme();
 }
 
 
-// function execTheme(){
-//     let fontSize = localStorage.getItem('fontSize');
-//     fontSize(fontSize);
-// }
+function execTheme(){
+    let fontSize = localStorage.getItem('fontSize');
+    font(fontSize);
+    let colorText = localStorage.getItem('colorText');
+    color(colorText);
+    let fontFamily = localStorage.getItem('fontFamily');
+    fontStyle(fontFamily);
+    let bckgColor = localStorage.getItem('backgroundColor');
+    bckgColors(bckgColor);
+}
 
-// function fontSize(font){
-//     let texts = document.getElementsByClassName('texts');
-//     console.log(texts)
-//     for(let index = 0; index < texts.length; index += 1){
+function font(font){
+    let texts = document.getElementsByClassName('texts');
+    for(let index = 0; index < texts.length; index += 1){
+        texts[index].style.fontSize = font;
+    }
+}
 
-//     }
-// }
+function color(colorText){
+    let texts = document.getElementsByClassName('texts');
+    for(let index = 0; index < texts.length; index += 1){
+        texts[index].style.color = colorText;
+    }
+}
+
+function fontStyle(fontFamily){
+    let texts = document.getElementsByClassName('texts');
+    for(let index = 0; index < texts.length; index += 1){
+        texts[index].style.fontFamily = fontFamily;
+    }
+}
+
+function bckgColors(bckgColor){
+    let texts = document.getElementsByClassName('texts');
+    for(let index = 0; index < texts.length; index += 1){
+        texts[index].style.backgroundColor = bckgColor;
+    }
+}
+
