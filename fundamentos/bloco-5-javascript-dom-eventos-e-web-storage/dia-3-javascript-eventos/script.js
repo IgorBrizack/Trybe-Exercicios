@@ -73,7 +73,7 @@ createBtn('feriados');
 const btnHoliday = document.getElementById('btn-holiday');
 btnHoliday.addEventListener('click', changeBackgroundColor);
 let aux = 0;
-function changeBackgroundColor(){
+function changeBackgroundColor() {
     let holidays = document.getElementsByClassName('holiday');
     if(aux == 0) {
         for(let index = 0; index < holidays.length; index += 1){
@@ -86,7 +86,6 @@ function changeBackgroundColor(){
         }
         aux = 0;
     }
-    
 }
 
 // Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão   com o nome "Sexta-feira".
