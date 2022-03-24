@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: gray;
+}
+
 #form-title-box{
     background-color: rgb(49, 107, 82);
     text-align: center;
@@ -16,10 +20,11 @@
 }
 
 .trip-form {
+    text-align: center;
     margin: auto;
     width: 50%;
     border: 2px solid black;
-    height: 400px;
+    height: 600px;
     border-radius: 3px;
     background-color: rgb(49, 107, 82);
     padding: 50px;
@@ -76,3 +81,16 @@ fieldset label {
     color: white;
     font-size: 20px;
 }
+
+#paragraph-explain {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font: bold;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 15px;
+    resize: none;
+  }
