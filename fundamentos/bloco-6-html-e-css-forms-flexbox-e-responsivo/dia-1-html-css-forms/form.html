@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="form-title-box">
+        <h1>Trybe Trip Fomulário</h1>
+    </header>
+    <main>
+        <form action="" method="get" class="trip-form">
+            <div class="name-area">
+                <label for="name-text" id="name-text-label">Nome:</label>
+                <input type="text" id="name-text" name="name-text" required minlength="10" maxlength="40">
+            </div>
+            <br>
+            <div class="email-area">
+                <label for="email-text" id="email-text-label">Email:</label>
+                <input type="email" id="email-text" name="email-text" required minlength="10" maxlength="50">
+            </div>
+            <div class="option-trip-area">
+                <fieldset class="fieldset-style">
+                    <legend>Destinos</legend>
+                    <input type="radio" id="nordeste-trip" name="trip-destiny">
+                    <label for="nordeste-trip">Nordeste</label>
+
+                    <input type="radio" id="norte-trip" name="trip-destiny">
+                    <label for="norte-trip">Norte</label>
+
+                    <input type="radio" id="sul-trip" name="trip-destiny">
+                    <label for="sul-trip">Sul</label>
+
+                    <input type="radio" id="suldeste-trip" name="trip-destiny">
+                    <label for="suldeste-trip">Suldeste</label>
+
+                    <input type="radio" id="centro-oeste-trip" name="trip-destiny">
+                    <label for="centro-oeste-trip">Centro-Oeste</label>
+                </fieldset>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>
