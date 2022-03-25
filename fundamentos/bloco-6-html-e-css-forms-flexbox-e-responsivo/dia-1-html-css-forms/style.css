@@ -21,10 +21,10 @@ body{
 
 .trip-form {
     text-align: center;
-    margin: auto;
+    margin: auto ;
     width: 50%;
     border: 2px solid black;
-    height: 550px;
+    height: 600px;
     border-radius: 3px;
     background-color: rgb(49, 107, 82);
     padding: 50px;
@@ -106,16 +106,16 @@ textarea {
     font-size: 20px;
 }
 
-.buttons-elements {
+/* .buttons-elements {
     background-color: rgb(49, 107, 82);
     text-align: center;
     width: 50%;
-    margin: 10px auto;
+    margin: 10px auto 10px auto;
     border: 2px solid black;
     border-radius: 3px;
     padding: 10px;
     color: white;
-}
+} */
 
 #send-text{
     width: 100px;
