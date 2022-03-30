@@ -5,3 +5,35 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+
+@media screen and (max-width: 375px) {
+    * {
+        margin: auto 10px;
+        text-align: justify
+    };
+}
+
+@media screen and (max-width: 412px) and (min-width: 376px) {
+    * {
+        margin: auto 10px;
+        text-align: justify;
+        background-color: gray
+    };
+
+    body article p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 413px) {
+    * {
+        margin: auto 10px;
+        text-align: justify;
+        background-color: purple;
+    };
+
+    body article p {
+        font-size: 35px;
+    }
+  }
