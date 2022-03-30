@@ -8,6 +8,8 @@
   
   *, *:before, *:after {
     box-sizing: inherit;
+    font-size: 30px;
+    margin: 20px;
   }
   
   body {
@@ -19,7 +21,7 @@
   }
   
   h1 {
-  
+    font-size: 25px;
   }
   
   h2 {
@@ -39,9 +41,38 @@
   }
   
   figure {
-      margin: 0;
+      margin: 20px;
   }
   
   figcaption {
     font-size: .8em;
+  }
+
+  @media screen and (min-width: 800px) {
+    * {
+      background-color: red;
+      font-size: 25px;
+      margin: 10px;
+    }
+
+    .pai {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+  }
+
+  @media screen and (min-width: 1300px){
+    * {
+        background-color: blue;
+        font-size: 40px;
+        margin: 10px;
+        max-width: 1300px;
+      }
+  
+      .pai {
+          display: flex;
+          flex-wrap: wrap;
+  
+      }
   }
