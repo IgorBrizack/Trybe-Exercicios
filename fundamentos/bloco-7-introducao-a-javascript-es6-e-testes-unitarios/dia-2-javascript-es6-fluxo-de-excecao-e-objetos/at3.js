@@ -24,4 +24,12 @@ const newKey = (object, newKey, content) => {
 }
 
 newKey(lesson2, 'turno', 'noite');
+
+console.log(Object.keys(lesson2));
  
+console.log(`Tamanho: ${Object.keys(lesson2).length}`)
+
+const objectValue = (object) => {
+  console.log(Object.values(object));
+}
+objectValue(lesson2)
