@@ -34,11 +34,8 @@ const objectValue = (object) => {
 }
 objectValue(lesson2)
 
-const allLessonsObject = (object1, object2, object3) => {
-  const allLessons = Object.assign({});
-  allLessons.lesson1 = object1;
-  allLessons.lesson2 = object2;
-  allLessons.lesson3 = object3;
+const allLessonsObject = (lesson1, lesson2, lesson3) => {
+  const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
   console.log(allLessons);
 }
 
