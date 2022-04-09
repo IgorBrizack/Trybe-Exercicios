@@ -16,3 +16,39 @@ const dadosEmplyee = (nomeCompleto) => {
 }
 
 console.log(newEmployees(dadosEmplyee));
+
+////////////////////////////////////////////////////////////////////////////
+// Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").
+
+const sorteio = (numeroEscolhido) => {
+  let numeroSorteado = Math.ceil(Math.random() * 4);
+  var resultado = numeroEscolhido === numeroSorteado ? 'Parabéns você ganhou!' : 'Tente Novamente';
+  return resultado;
+};
+
+const numeroEscolhido = () => Math.ceil(Math.random() * 4);
+
+console.log(sorteio(numeroEscolhido()));
+
+/////////////////////////////////////////////////////////////////////////////
+// Crie uma HOF que receberá três parâmetros. O primeiro será um array de respostas corretas (Gabarito), o segundo será um array de respostas a serem verificadas (respostas da pessoa estudante) e o terceiro é uma função que checa se as respostas estão corretas e faz a contagem da pontuação final recebida pela pessoa estudante. Ao final a HOF deve retornar o total da contagem de respostas certas.
+// Quando a resposta for correta a contagem sobe 1 ponto, quando for incorreta desce 0.5 pontos, e quando não houver resposta ("N.A") não altera-se a contagem.
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const answersVerify = (rightAnswers, studentAnswers) => {
+  let points = 0;
+  for (let index in rightAnswers){
+    if (rightAnswers[index] === studentAnswers[index]) {
+      points += 1;
+    }
+  }
+  return `Foram feitos ${points} pontos!`;
+}
+
+const correctAnswers = (rightAnswers, studentAnswers, verifyFunction) => {
+  return verifyFunction(rightAnswers,studentAnswers);
+}
+
+console.log(correctAnswers(RIGHT_ANSWERS, STUDENT_ANSWERS, answersVerify));
