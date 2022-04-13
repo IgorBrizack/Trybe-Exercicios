@@ -8,8 +8,6 @@ const arrays = [
   
 const newArray = arrays.reduce((acc, valor) => {
     return acc.concat((valor), []);
-    
-
 });
 
 console.log(newArray);
