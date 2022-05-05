@@ -1,5 +1,0 @@
--unix
--git
--bash
--html
--css
